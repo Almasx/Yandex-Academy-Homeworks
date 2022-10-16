@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
+  </head>
+  <body>
+    <main>
+      <section class="search">
+        <img src="assets/logo.svg" alt="sheesh" class="search__logo" />
+        <form action="" class="search__form">
+          <input
+            type="text"
+            placeholder="Найдётся все"
+            class="search__form__input"
+          />
+          <button type="submit" class="search__form__button">Найти</button>
+        </form>
+      </section>
+      <section class="error">
+        <h4 class="error__message">Ошибка 404. Нет такой страницы</h4>
+        <p class="error__description">
+          Если вы считаете, что страницы нет по нашей вине,
+          <a href="#">напишите нам</a>.
+        </p>
+      </section>
+      <section class="products"></section>
+    </main>
+    <footer>
+      <a href="#" class="footer__item">Компания</a>
+      <a href="#" class="footer__item">About</a>
+      <a href="#" class="footer__item">© Яндекс</a>
+    </footer>
+
+    <script type="text/javascript">
+      const parseProduct = (product) => {
+        const { title, icon, description } = product;
+        return `
+        <div class="product">
+            <img src="./assets/products/${icon}" class="product__logo" />
+          <div class="product__content">
+            <a href="#" class="product__title">${title}</a>&#160;
+            <div class="product__description">${description}</div>
+          </div>
+        </div>
+        `;
+      };
+
+      const loadProducts = (products) => {
+        let productsHTML = products.reduce(
+          (product_a, product_b) => product_a + parseProduct(product_b),
+          ""
+        );
+        document.querySelector(".products").innerHTML = productsHTML;
+      };
+
+      fetch("./assets/data.json")
+        .then((response) => response.json())
+        .then((data) => loadProducts(data))
+        .catch((error) => console.log(error));
+    </script>
+  </body>
+</html>

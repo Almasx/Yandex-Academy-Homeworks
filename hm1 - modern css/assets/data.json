@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Маркет",
+    "icon": "market.svg",
+    "description": "Смартфоны Huawei"
+  },
+  { "title": "Плюс", "icon": "plus.svg", "description": "теперь и для семьи" },
+  {
+    "title": "Музыка",
+    "icon": "music.svg",
+    "description": "подкасты где угодно"
+  },
+  {
+    "title": "Кинопоиск",
+    "icon": "kinopoisk.svg",
+    "description": "Нулевой процент"
+  },
+  {
+    "title": "Практикум",
+    "icon": "praticum.svg",
+    "description": "стать аналитиком"
+  },
+  {
+    "title": "Едадил",
+    "icon": "edadeal.svg",
+    "description": "Скидки в супермаркитах"
+  },
+  {
+    "title": "Толоко",
+    "icon": "toloka.svg",
+    "description": "удалённый заработок"
+  }
+]

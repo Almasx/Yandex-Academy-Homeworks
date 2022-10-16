@@ -1,0 +1,167 @@
+/* --- */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  line-height: 1.5;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #1777d4;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* --- */
+
+:root {
+  --primary-bg-color: #ffc93d;
+  --padding: 130px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 992px;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search__logo {
+  height: 32px;
+  margin-right: 20px;
+}
+
+.search__form {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--primary-bg-color);
+}
+
+.search__form__button {
+  padding: 8px 12px;
+  background-color: var(--primary-bg-color);
+  border: 0;
+}
+
+.search__form__input {
+  flex-grow: 1;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 3px solid var(--primary-bg-color);
+}
+
+.error {
+  margin-top: 32px;
+  margin-left: var(--padding);
+}
+
+.error__message {
+  font-size: 24pt;
+  font-weight: 500;
+}
+
+.products {
+  margin-top: 32px;
+  margin-left: var(--padding);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 64px;
+  row-gap: 8px;
+}
+
+.product {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.product__logo {
+  height: 22px;
+  margin-right: 8px;
+}
+
+.product__content {
+  display: flex;
+  flex-direction: row;
+}
+
+.product__description::before {
+  content: " ━ ";
+}
+
+footer {
+  position: fixed;
+  bottom: 32px;
+  left: calc((100% - 992px) / 2 + 110px);
+  display: flex;
+  gap: 20px;
+}
+
+.footer__item {
+  color: #b6aaad;
+}
+
+@media only screen and (max-width: 750px) {
+  :root {
+    --padding: 0px;
+  }
+  main {
+    width: 90%;
+  }
+
+  .products {
+    column-gap: 15px;
+  }
+
+  .error {
+    margin-top: 20px;
+  }
+
+  .error__message {
+    font-size: 20pt;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .search__logo {
+    height: 20px;
+    margin-right: 12px;
+  }
+
+  .products {
+    margin-top: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    left: 15px;
+  }
+}
