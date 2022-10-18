@@ -5,6 +5,8 @@
 ## Instruction
 Launch via Live Server VS Code Extension:
 https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+![image](https://user-images.githubusercontent.com/58309601/196484222-d30117ec-1f07-4d56-ab1a-23737a5c7476.png)
+
 
 ### Desktop:
 ![image](https://user-images.githubusercontent.com/58309601/196036768-754a6821-000b-4cef-97c1-a349293078a2.png)
