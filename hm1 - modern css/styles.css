@@ -42,7 +42,7 @@ input:focus {
 main {
   display: flex;
   flex-direction: column;
-  max-width: 992px;
+  max-width: 780px;
 }
 
 .search {
@@ -120,7 +120,7 @@ main {
 footer {
   position: fixed;
   bottom: 32px;
-  left: calc((100% - 992px) / 2 + 110px);
+  left: calc((100% - 780px) / 2);
   display: flex;
   gap: 20px;
 }
@@ -129,10 +129,11 @@ footer {
   color: #b6aaad;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 780px) {
   :root {
     --padding: 0px;
   }
+
   main {
     width: 90%;
   }
@@ -148,9 +149,13 @@ footer {
   .error__message {
     font-size: 20pt;
   }
+
+  footer {
+    left: calc(5%);
+  }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 680px) {
   .search__logo {
     height: 20px;
     margin-right: 12px;
@@ -159,9 +164,5 @@ footer {
   .products {
     margin-top: 20px;
     grid-template-columns: 1fr;
-  }
-
-  footer {
-    left: 15px;
   }
 }
