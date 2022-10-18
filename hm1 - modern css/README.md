@@ -2,6 +2,10 @@
 - Responsive
 - Plain HTML/CSS/JS
 
+## Instruction
+Launch via Live Server VS Code Extension:
+https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+
 ### Desktop:
 ![image](https://user-images.githubusercontent.com/58309601/196036768-754a6821-000b-4cef-97c1-a349293078a2.png)
 
