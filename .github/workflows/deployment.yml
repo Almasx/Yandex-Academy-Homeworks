@@ -51,7 +51,7 @@ jobs:
           node-version: 16
           cache: "npm"
           cache-dependency-path: hm2-infrastructure/package-lock.json
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
-      - run: npm run deploy
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
