@@ -29,7 +29,8 @@ jobs:
   deploy:
     defaults:
       run:
-        working-directory: dart_project
+        working-directory: hm2 - infrastructure
+
     needs: build
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
