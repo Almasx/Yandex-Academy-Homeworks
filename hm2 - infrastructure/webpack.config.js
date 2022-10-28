@@ -6,6 +6,7 @@ const LodashWebpackPlugin = require("lodash-webpack-plugin");
 const port = process.env.PORT || 3000;
 
 const config = {
+  devtool: "eval-source-map",
   mode: "development",
   entry: {
     about: "./src/pages/About.js",
