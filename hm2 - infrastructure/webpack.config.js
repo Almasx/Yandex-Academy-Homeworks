@@ -55,6 +55,10 @@ const config = {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.json$/,
+        loader: "json-loader",
+      },
     ],
   },
   target: "web",
@@ -71,15 +75,13 @@ const config = {
   },
   optimization: {
     minimize: true,
+    emitOnErrors: true,
+    concatenateModules: true,
+    moduleIds: "size",
+    mergeDuplicateChunks: true,
+    runtimeChunk: "single",
     splitChunks: {
-      cacheGroups: {
-        vendor: {
-          name: "vendors",
-          test: /[\\/]node_modules[\\/]/,
-          chunks: "all",
-          enforce: true,
-        },
-      },
+      chunks: "async",
     },
   },
   devServer: {
