@@ -55,6 +55,4 @@ jobs:
           cache: "npm"
           cache-dependency-path: hm2-infrastructure/package-lock.json
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: hm2-infrastructure/dist
+        run: npm run deploy
