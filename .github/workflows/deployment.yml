@@ -4,14 +4,14 @@ on:
   push:
     branches: ["master"]
 
-defaults:
-  run:
-    working-directory: hm2 - infrastructure
-
 jobs:
   build:
     # Specify runner + deployment step
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: hm2-infrastructure
 
     steps:
       - uses: actions/checkout@v3
@@ -25,6 +25,10 @@ jobs:
 
   deploy:
     needs: build
+
+    defaults:
+      run:
+        working-directory: hm2-infrastructure
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
