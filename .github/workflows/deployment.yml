@@ -4,11 +4,13 @@ on:
   push:
     branches: ["master"]
 
+defaults:
+  run:
+    working-directory: hm2 - infrastructure
+
 jobs:
   build:
-    defaults:
-      run:
-        working-directory: dart_project
+    # Specify runner + deployment step
     runs-on: ubuntu-latest
 
     steps:
@@ -22,10 +24,6 @@ jobs:
       - run: npm run build
 
   deploy:
-    defaults:
-      run:
-        working-directory: hm2 - infrastructure
-
     needs: build
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
