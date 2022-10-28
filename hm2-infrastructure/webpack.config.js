@@ -13,7 +13,7 @@ const config = {
     home: "./src/pages/Home.jsx",
     main: {
       dependOn: ["about", "home"],
-      import: "./src/index.jsx",
+      import: "./src/index.js",
     },
   },
   plugins: [
