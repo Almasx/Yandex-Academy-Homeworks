@@ -54,7 +54,7 @@ jobs:
           node-version: 16
           cache: "npm"
           cache-dependency-path: hm2-infrastructure/package-lock.json
-      - run: git config --global user.email "saparovalmas0@gmail.com"
-      - run: git config --global user.name "Almasx"
       - name: Deploy 🚀
-        run: npm run deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: hm2-infrastructure/dist
