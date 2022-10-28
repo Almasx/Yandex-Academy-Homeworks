@@ -13,16 +13,18 @@ jobs:
     defaults:
       run:
         working-directory: hm2-infrastructure
+
     # Specify runner + deployment step
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js 16.x
+      - name: Use Node.js 16
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 16
           cache: "npm"
+          cache-dependency-path: hm2-infrastructure/package-lock.json
       - run: npm ci
       - run: npm lint:js
       - run: npm lint:css
