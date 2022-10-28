@@ -9,11 +9,11 @@ const config = {
   devtool: "eval-source-map",
   mode: "development",
   entry: {
-    about: "./src/pages/About.js",
-    home: "./src/pages/Home.js",
+    about: "./src/pages/About.jsx",
+    home: "./src/pages/Home.jsx",
     main: {
       dependOn: ["about", "home"],
-      import: "./src/index.js",
+      import: "./src/index.jsx",
     },
   },
   plugins: [
