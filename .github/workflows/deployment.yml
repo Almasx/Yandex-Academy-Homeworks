@@ -4,8 +4,7 @@ on:
   push:
     branches: ["master"]
 
-permissions:
-  contents: write
+permissions: read-all|write-all
 
 jobs:
   build:
@@ -57,4 +56,4 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: hm2-infrastructure/dist
+          folder: ./hm2-infrastructure/dist
