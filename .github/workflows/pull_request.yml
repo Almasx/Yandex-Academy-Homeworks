@@ -22,7 +22,7 @@ jobs:
           cache: "npm"
           cache-dependency-path: hm2-infrastructure/package-lock.json
       - run: npm ci
-      - run: npm lint:js
-      - run: npm lint:css
+      - run: npm run lint:js
+      - run: npm run lint:css
       - run: npm run build
       - run: echo "Pull request success ✅"
