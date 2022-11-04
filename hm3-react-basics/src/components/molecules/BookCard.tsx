@@ -25,11 +25,13 @@ const BookCard = ({
   const [counter, setCounter] = useState<number>(0);
   const navigate = useNavigate();
 
-  const onDecrease = () => {
+  const onDecrease = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
     setCounter((previos) => (previos >= 1 ? previos - 1 : 0));
   };
 
-  const onIncrease = () => {
+  const onIncrease = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
     setCounter((previos) => previos + 1);
   };
 
