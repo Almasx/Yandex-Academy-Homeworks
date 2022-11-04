@@ -1,0 +1,34 @@
+name: Deployment
+
+on:
+  push:
+    branches: ["master"]
+
+permissions: write-all
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: hm2-infrastructure
+
+    environment:
+      name: github-pages
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+          cache: "npm"
+          cache-dependency-path: hm2-infrastructure/package-lock.json
+      - run: npm ci
+      - run: npm run build
+      - name: Deploy 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./hm2-infrastructure/dist
