@@ -1,0 +1,12 @@
+{
+  "name": "hm4-react-advanced",
+  "version": "1.0.0",
+  "description": "Homework for Yandex Academy lyceum",
+  "scripts": {
+    "server": "yarn --cwd ./server run dev",
+    "client": "yarn --cwd ./client run start",
+    "dev": "concurrently -k \"yarn run server\" \"yarn run client\""
+  },
+  "author": "Almas Saparov",
+  "license": "MIT"
+}

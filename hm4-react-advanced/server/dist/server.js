@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express = require("express");
+const port = 5000;
+const app = express();
+const bookRoutes_1 = require("./routes/bookRoutes");
+const genreRoutes_1 = require("./routes/genreRoutes");
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use("/api/books", bookRoutes_1.default);
+app.use("/api/genres", genreRoutes_1.default);
+app.listen(port, () => console.log(`Server started on port ${port}`));
