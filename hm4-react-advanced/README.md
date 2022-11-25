@@ -1,7 +1,8 @@
+# Install concurrently globally
+
 ## Info
 
 Used Vite as module bundler, yarn as package manager, tailwind for css, express for backend, everything else is within the traditional stack \
-Install concurrently globally
 
 ## Available Scripts
 
