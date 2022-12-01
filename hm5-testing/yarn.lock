@@ -3321,7 +3321,7 @@ concat-map@0.0.1:
   resolved "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz"
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
 
-concat-stream@^1.6.1, concat-stream@^1.6.2:
+concat-stream@^1.6.1:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/concat-stream/-/concat-stream-1.6.2.tgz#904bdf194cd3122fc675c77fc4ac3d4ff0fd1a34"
   integrity sha512-27HBghJxjiZtIk3Ycvn/4kbJk/1uZuJFfuPEns6LaEvpvG1f0hTea8lilrouyo9mVc2GWdcEZ8OLoGmSADlrCw==
@@ -3564,6 +3564,11 @@ csstype@^3.0.2:
   version "3.1.1"
   resolved "https://registry.npmjs.org/csstype/-/csstype-3.1.1.tgz"
   integrity sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==
+
+cypress-each@^1.13.1:
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/cypress-each/-/cypress-each-1.13.1.tgz#65121a7f9fe865a6ea52e0751133b4e0e84f47a8"
+  integrity sha512-YbVfrjk4gWTDLOV8YAb3tA6ovQiyl90zvl4M7aLADD0aUBei6nOSXI7xu6LVgLlVcLkM4jRSS2jBIiifauGgpQ==
 
 damerau-levenshtein@^1.0.8:
   version "1.0.8"
@@ -5000,9 +5005,9 @@ he@1.2.0, he@^1.2.0:
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
 
 hermione@^5.4.1:
-  version "5.4.1"
-  resolved "https://registry.yarnpkg.com/hermione/-/hermione-5.4.1.tgz#e2760521ce8155a4e3a97cb881f0762b2f3fa7a3"
-  integrity sha512-5NPs0fQ2RfMZtR7q1t5OqLGuWrTjWUGTsvFRdbG/AG5O7SlpHBFQ1nr5zUaYlEJBvK+Evq1smSauuOCKds6CfA==
+  version "5.5.2"
+  resolved "https://registry.yarnpkg.com/hermione/-/hermione-5.5.2.tgz#de02b13448bf4dcb398e558faf85a1a4acd4c80e"
+  integrity sha512-RuAv/RtrHnvZunRCnPkgr22s51bECtRFFIs9Oa5lXJ4/EwqNzlISbZOJW38GZhAFm/c64ZutOjJSCw6fHlc+cA==
   dependencies:
     "@gemini-testing/commander" "2.15.3"
     "@gemini-testing/mocha" "^9.3.0"
@@ -5021,7 +5026,7 @@ hermione@^5.4.1:
     glob-extra "^5.0.2"
     inherit "^2.2.2"
     lodash "^4.17.21"
-    looks-same "^8.0.1"
+    looks-same "^8.1.0"
     micromatch "^4.0.5"
     plugins-loader "^1.1.0"
     sharp "~0.30.7"
@@ -5088,9 +5093,9 @@ html-minifier-terser@^6.0.2:
     terser "^5.10.0"
 
 html-reporter@^9.4.0:
-  version "9.4.0"
-  resolved "https://registry.yarnpkg.com/html-reporter/-/html-reporter-9.4.0.tgz#1b5c8eed36fff531c59dc82f3e9b8b71f6e0a8ce"
-  integrity sha512-wn8xh2uXNPKXOjkuJgp0fy0f9PQHw3FoYUwEUygn5nYioXgu7Gpt9XcwZHq5YebzmuB3CNFI6bGW7LqNBZDkfA==
+  version "9.5.1"
+  resolved "https://registry.yarnpkg.com/html-reporter/-/html-reporter-9.5.1.tgz#fc32b1a9caf33913f03ff314e16b62b26ba95a62"
+  integrity sha512-jWzUhdIY1pV9I8wlN85diDcFKNW+4kX1O8Chu0IknQv+qC3sBcABn/VfeG5U3OCaqkC7uhumU8RrISZsCyZCxA==
   dependencies:
     "@gemini-testing/sql.js" "^1.0.1"
     axios "^0.18.1"
@@ -5108,7 +5113,7 @@ html-reporter@^9.4.0:
     inquirer "^8.2.0"
     json-stringify-safe "^5.0.1"
     lodash "^4.17.4"
-    looks-same "^8.0.0"
+    looks-same "^8.1.0"
     nested-error-stacks "^2.1.0"
     opener "^1.4.3"
     ora "^5.4.1"
@@ -6478,19 +6483,18 @@ longest@^1.0.1:
   resolved "https://registry.yarnpkg.com/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
   integrity sha512-k+yt5n3l48JU4k8ftnKG6V7u32wyH2NfKzeMto9F/QRE0amxy/LayxwlvjjkZEIzqR+19IrtFO8p5kB9QaYUFg==
 
-looks-same@^8.0.0, looks-same@^8.0.1:
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/looks-same/-/looks-same-8.0.1.tgz#8de32c790616e86c3175145707a8cb9bbe6d5f1d"
-  integrity sha512-AvkyfE+NqhfpUexMJYEpqroSjgwD5brxidWNb1sPHZiV8MS0vnh1f0mFnSycXL+y5QfLFtEZOt3G+z8BNA4OCA==
+looks-same@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/looks-same/-/looks-same-8.1.0.tgz#0ac94d90fc32b77858a747486e0d3b494c9d8c56"
+  integrity sha512-gdMgCSCvhpR2/AA15CamZD7Ch+gx8sOqWyRzz3j1Gs8+2VBCyHm3CRMS8EK+5rNvpwf9AGEnDunredVM5+f46w==
   dependencies:
     color-diff "^1.1.0"
-    concat-stream "^1.6.2"
     fs-extra "^8.1.0"
     js-graph-algorithms "1.0.18"
     lodash "^4.17.3"
     nested-error-stacks "^2.1.0"
     parse-color "^1.0.0"
-    pngjs "^6.0.0"
+    sharp "~0.30.7"
 
 loose-envify@^1.1.0, loose-envify@^1.2.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
   version "1.4.0"
@@ -7222,11 +7226,6 @@ plugins-loader@^1.1.0:
   dependencies:
     lodash "^4.16.4"
 
-pngjs@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-6.0.0.tgz#ca9e5d2aa48db0228a52c419c3308e87720da821"
-  integrity sha512-TRzzuFRRmEoSW/p1KVAmiOgPco2Irlah+bGFCeNfJXxxYGwSw7YwAOAcd7X28K/m5bjBWKsC29KyoMfHbypayg==
-
 postcss-modules-extract-imports@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/postcss-modules-extract-imports/-/postcss-modules-extract-imports-3.0.0.tgz"
@@ -7579,7 +7578,7 @@ react-redux@^7.2.5:
 
 react-router-dom@^5.3.0:
   version "5.3.4"
-  resolved "https://registry.npmjs.org/react-router-dom/-/react-router-dom-5.3.4.tgz"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-5.3.4.tgz#2ed62ffd88cae6db134445f4a0c0ae8b91d2e5e6"
   integrity sha512-m4EqFMHv/Ih4kpcBCONHbkT68KoAeHN4p3lAGoNryfHi0dMy0kCzEZakiKRsvg5wHZ/JLrLW8o8KomWiz/qbYQ==
   dependencies:
     "@babel/runtime" "^7.12.13"

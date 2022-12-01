@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "start": "nodemon ./src/server/index.ts",
-    "test": "jest",
+    "test:unit": "jest",
+    "test:e2e": "hermione test/hermione",
+    "test:e2e:gui": "hermione gui test/hermione",
     "build": "webpack --mode=production --node-env=production",
-    "watch": "webpack --watch",
-    "hermione": "hermione test/hermione",
-    "hermione:gui": "hermione gui test/hermione"
+    "watch": "webpack --watch"
   },
   "dependencies": {
     "@bem-react/classname": "^1.5.12",
@@ -49,6 +49,7 @@
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.43.0",
     "css-loader": "^6.3.0",
+    "cypress-each": "^1.13.1",
     "eslint": "^8.28.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.26.0",
